@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs pleasse refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Core
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Blark_Sms>
+            <version>1.2.0.0</version>
+        </Blark_Sms>
+    </modules>
+
+
+    <global>
+        <models>
+            <blark_sms>
+                <class>Blark_Sms_Model</class>
+                    <resourceModel>blark_sms_resource</resourceModel>
+            </blark_sms>
+
+            
+            <blark_sms_resource>
+                 <class>Blark_Sms_Model_Resource</class>
+                 <entities>
+                     <sms>
+                       <table>sms_contact_groups</table>
+                     </sms>
+                  </entities>
+            </blark_sms_resource>
+        </models>
+     
+        <resource>
+            <blark_sms_write>
+                <connection>
+                    <use> core_write </use>
+                </connection>
+            </blark_sms_write>
+        </resource>
+
+        <resource>
+            <blark_sms_read>
+                <connection>
+                    <use> core_read </use>
+                </connection>
+            </blark_sms_read>
+        </resource>
+
+        
+          <resources>
+            <blark_sms_setup>
+                <setup>
+                    <module>Blark_Sms</module>
+                </setup>
+            </blark_sms_setup>
+        </resources> 
+
+ 
+        <blocks>
+            <blark_sms>
+                <class>Blark_Sms_Block</class>
+            </blark_sms>
+        </blocks>
+
+        <helpers>
+            <blark_sms>
+                <class>Blark_Sms_Helper</class>
+            </blark_sms>
+        </helpers>
+
+        <template>
+            <sms/>
+        </template>
+        <sms>
+            <gateway/>
+        </sms>
+    </global>
+    
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <sms after="Mage_Adminhtml">Blark_Sms_Adminhtml</sms>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <Blark_Sms>
+                    <files>
+                        <default>Blark_Sms.csv</default>
+                    </files>
+                </Blark_Sms>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <system>
+            <sms>
+                <disable>0</disable>
+                <gateway></gateway>
+            </sms>
+        </system>
+        <trans_sms>
+            <ident_general>
+                <sender></sender>
+            </ident_general>
+            <ident_sales>
+                <sender></sender>
+            </ident_sales>
+            <ident_support>
+                <sender></sender>
+            </ident_support>
+        </trans_sms>
+    </default>
+
+  <adminhtml>
+      <layout>
+       <updates>
+         <sms>
+            <file>sms.xml</file>
+          </sms>
+         </updates>
+       </layout>
+   </adminhtml>
+
+
+    
+</config>

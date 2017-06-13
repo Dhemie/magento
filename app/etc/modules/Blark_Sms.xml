@@ -1,0 +1,9 @@
+<?xml version = "1.0"?>
+<config>
+    <modules>
+        <Blark_Sms>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Blark_Sms>
+    </modules>
+</config>

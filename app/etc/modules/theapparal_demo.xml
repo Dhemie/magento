@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config>
+	<modules>
+		<Theapparel_Demo>
+			<active>
+				true
+			</active>
+			<codePool>local</codePool>
+		</Theapparel_Demo>
+	</modules>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+	<modules>
+		<Theapparel_Blackfridayspecial>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Theapparel_Blackfridayspecial>
+	</modules>
+</config>

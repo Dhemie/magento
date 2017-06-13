@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * The Apparel
+ * http://theapparel.com
+ *
+ * @description  Layout modifications
+ * @author       Demilade Oyewusi
+ * @package      dhemie_default
+ *
+ */
+-->
+<layout version="0.1.0">
+    <!-- our modifications will go here -->
+    <default>
+    	<reference name="head">
+ 			<!-- Add local jsrequirements -->
+           <action method="addItem"><type>skin_js</type><name>js/libs/jquery.min.js</name></action>
+           <action method="addItem"><type>skin_js</type><name>js/libs/unslider-min.js</name></action>
+
+           <action method="addItem"><type>skin_js</type><name>js/libs/html5shiv.min.js</name><params/><if>lt IE 9</if></action>
+           <action method="addItem"><type>skin_js</type><name>js/libs/respond.min.js</name><params/><if>lt IE 9</if></action>
+           <action method="addItem"><type>skin_js</type><name>js/libs/selectivizr.min.js</name><params/><if>lt IE 9</if></action>
+           <action method="addItem"><type>skin_css</type><name>css/unslider.css</name></action>
+ 
+            <!-- remove some items we dont need (globally) -->
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
+            <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name><if>lt IE 7</if></action>
+            <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name><params/><if>lt IE 7</if></action>
+    	</reference>
+    </default>
+
+<default>
+        <!-- Mage_Tag  Add the tag cloud to side bar -->
+        <reference name="left">
+            <block type="tag/popular" name="tags_popular" template="tag/popular.phtml"/>
+        </reference>
+
+        <reference name="right">
+            <block type="tag/all" name="tags_all" template="tag/cloud.phtml"/>
+        </reference>
+
+
+
+
+</default>
+
+    <cms_index_index>
+        <reference name="head">
+            <!-- items for just the homepage -->
+            <action method="addItem"><type>skin_js</type><name>js/libs/home.min.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/home.css</name></action>
+        </reference>
+    </cms_index_index>
+
+
+</layout>
+
+

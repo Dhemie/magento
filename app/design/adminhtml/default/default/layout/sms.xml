@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_sms_calldb>
+        <reference name="content">
+            <block type="blark_sms/adminhtml_sms" name="contacts" /> 
+        </reference>
+    </adminhtml_sms_calldb>
+</layout>
+

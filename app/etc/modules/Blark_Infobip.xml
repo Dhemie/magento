@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<config>
+    <modules>
+        <Blark_Infobip>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Blark_Sms/>
+            </depends>
+        </Blark_Infobip>
+    </modules>
+</config>
